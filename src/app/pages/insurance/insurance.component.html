@@ -1,0 +1,100 @@
+<div class="container-fluid page body">
+    <div class="row bg_col m">
+        <div class="col-12 my-4  text-center">
+            <h2 class="text-center">Complaint Registration</h2>
+        </div>
+    </div>
+    <div class="row mt-4 sh">
+        <div class="col-4">
+            <img src="/assets/lic.svg" alt="">
+        </div>
+        <div class="col-8">
+            <div class="row ">
+                <div class="col-12 ">
+                    <label class="pb-3" for="">My Complanit is against</label><br>
+                    <input class="mx-2 " type="radio" [(ngModel)]="complaintObj.complaintAgainst" name="complaint"
+                        value="Insurance company">Insurance company
+                    <input class="mx-2" type="radio" [(ngModel)]="complaintObj.complaintAgainst" name="complaint"
+                        value="Agent/Broker">
+                    Agent/Broker
+                    <input class="mx-2" type="radio" [(ngModel)]="complaintObj.complaintAgainst" name="complaint"
+                        value="Other">Other
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6">
+                    <label for="">First Name</label>
+                    <input type="text" [(ngModel)]="complaintObj.firstName" class="form-control my-2"
+                        placeholder="First Name">
+                </div>
+                <div class="col-6">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control my-2" [(ngModel)]="complaintObj.lastName"
+                        placeholder="Last Name">
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <label for="">Address</label><br>
+                    <textarea type="text" row="2" class="form-control  my-2" [(ngModel)]="complaintObj.address"
+                        placeholder="Address"></textarea>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="">City</label>
+                                    <input type="text" [(ngModel)]="complaintObj.city" class="form-control my-2"
+                                        placeholder="City">
+                                </div>
+                                <div class="col-4">
+                                    <label for="">State</label>
+                                    <input type="text" [(ngModel)]="complaintObj.state" class="form-control  my-2"
+                                        placeholder="State">
+                                </div>
+                                <div class="col-4">
+                                    <label for="">Pin Code</label>
+                                    <input type="text" [(ngModel)]="complaintObj.pincode" class="form-control  my-2"
+                                        placeholder="pincode">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6">
+                    <label for="">Contact No</label>
+                    <input type="text" class="form-control  my-2" [(ngModel)]="complaintObj.contactNo"
+                        placeholder="Contact No">
+                </div>
+                <div class="col-6">
+                    <label for="">Email Id</label>
+                    <input type="text" class="form-control  my-2" [(ngModel)]="complaintObj.emailID"
+                        placeholder="Email Id">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <label for="">Complaint</label>
+                    <textarea type="text" row="4" class="form-control  my-2" [(ngModel)]="complaintObj.Complaint"
+                        placeholder="Complaint"></textarea>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col-6 text-center">
+                    <button class="btn btn-secondary ">Reset</button>
+                </div>
+                <div class="col-6 text-center mb-5">
+                    <button class="btn btn-success" *ngIf="currentId==0" (click)="register()">Register
+                        Complaint</button>
+                    <button class="btn btn-primary" *ngIf="currentId !==0" (click)="onupdate()">Update
+                        Complaint</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

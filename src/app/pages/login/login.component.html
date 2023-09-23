@@ -1,0 +1,18 @@
+<div class="parent">
+    <header>
+        <h1>Insurance Portal</h1>
+    </header>
+    <main>
+        <form id="login_form" class="form_class" action="login/login-access.php" method="post">
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" name="login_txt" type="text" [(ngModel)]="userobj.username"
+                    placeholder="username" autofocus>
+                <label>Password:</label>
+                <input id="pass" class="field_class" name="password_txt" [(ngModel)]="userobj.password" type="password"
+                    placeholder="password">
+                <button class="submit_class" type="button" form="login_form" (click)="onlogin()">Enter</button>
+            </div>
+        </form>
+    </main>
+</div>
